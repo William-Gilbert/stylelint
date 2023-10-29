@@ -1,0 +1,7 @@
+@mixin mixin-name {
+  color: blue;
+}
+
+.selector {
+  @include mixin-name(); // Parentheses should not be used
+}

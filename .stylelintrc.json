@@ -1,0 +1,23 @@
+{
+    "customSyntax": "postcss-scss",
+    "plugins": ["stylelint-scss"],
+    "rules": {
+        "selector-class-pattern": "^[a-z0-9\\-]+$",
+        "value-keyword-case": "lower",
+        "selector-no-type": true,
+        "max-nesting-depth": [
+            3
+            ,
+            {
+                "ignore": ["pseudo-classes"]
+            }
+        ],
+        "scss/at-function-named-arguments": "always",
+        "scss/at-mixin-argumentless-call-parentheses": "never",
+        "scss/dollar-variable-colon-space-after": "always-single-line",
+        "scss/dollar-variable-first-in-block": [true, {
+            "ignore": ["comments","imports"]
+        }],
+        "scss/block-no-redundant-nesting": true
+    }
+  }

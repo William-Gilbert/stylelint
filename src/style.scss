@@ -1,0 +1,56 @@
+// space after colon
+.next {
+    $bad:blue;
+    $good: blue;
+}
+  
+//var first in block
+.next2 {
+    color: black;
+    $color: blue;
+ 
+    .sub {
+        color: red;
+    }
+}
+
+// prevent unnecessary nesting
+.foo {
+    &-bar {
+      &-baz {
+        color: red;
+      }
+    }
+    text-align: center;
+}
+
+
+// maxnesting
+.a {
+    color: black;
+    .b {
+        color: black;
+        .c {
+            color: black;
+            .d {
+                color: red;
+
+                .e {
+                    // Error
+                     color: red;
+
+                }
+
+                &:hover {
+                    // pseudo class allowed
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+// no tagname
+div {
+    color:red;
+}

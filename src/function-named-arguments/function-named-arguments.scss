@@ -1,0 +1,5 @@
+@function calculate($value1, $value2) {
+  @return $value1 + $value2;
+}
+
+$result: calculate(5, 7); // Should use named arguments
